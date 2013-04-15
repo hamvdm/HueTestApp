@@ -1,0 +1,122 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <SeekBar
+        android:id="@+id/seekBarHue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextBridgeIP"
+        android:layout_marginTop="36dp"
+        android:layout_toRightOf="@+id/button1"
+        android:contentDescription="Hue"
+        android:max="65535"
+/>
+
+    <SeekBar
+        android:id="@+id/seekBarSat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekBarHue"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/button1"
+        android:contentDescription="Sat"
+        android:max="255" 
+/>
+
+    <SeekBar
+        android:id="@+id/seekBarBri"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/seekBarSat"
+        android:layout_marginTop="18dp"
+        android:layout_toRightOf="@+id/button1"
+        android:contentDescription="Bri"
+        android:max="255" 
+/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/seekBarHue"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/button1"
+        android:text="Hue"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/seekBarSat"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/textView2"
+        android:text="Sat"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/seekBarBri"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/textView3"
+        android:text="Bri"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <EditText
+        android:id="@+id/editTextBridgeIP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button1"
+        android:layout_marginTop="26dp"
+        android:layout_toRightOf="@+id/button1"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editTextBridgeIP"
+        android:layout_alignBottom="@+id/editTextBridgeIP"
+        android:layout_alignParentLeft="true"
+        android:text="Bridge IP"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <Button
+        android:id="@+id/buttonOff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/editTextBridgeIP"
+        android:layout_alignLeft="@+id/editTextBridgeIP"
+        android:layout_marginLeft="16dp"
+        android:onClick="buttonOffClick"
+        android:text="OFF" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView4"
+        android:layout_below="@+id/seekBarBri"
+        android:layout_marginTop="44dp"
+        android:text="@string/hello_world" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView5"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="24dp"
+        android:onClick="button_Connect_OnClick"
+        android:text="On" />
+
+</RelativeLayout>
